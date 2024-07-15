@@ -6,7 +6,7 @@ type User struct {
 	ID              primitive.ObjectID `bson:"_id"`
 	Username        string            `bson:"username" validate:"required, min=2, max=100"`
 	Firstname       string            `bson:"firstname" `
-	Lastname        string            `bson:"lastname" evalidate:"requird, min=2, max=100"`
+	Lastname        string            `bson:"lastname" validate:"requird, min=2, max=100"`
 	Password        string            `bson:"password" validate:"required, min=6, max=18"`
 	CellPhoneNumber string            `bson:"cellNumber" validate:"required, min=6, max=18"`
 	HomePhoneNumber string            `bson:"homeNumber"`
@@ -15,4 +15,5 @@ type User struct {
 	Province        string            `bson:"province"`
 	PostalCode      string            `bson:"postalCode"`
 	Role            string            `bson:"role" validate:"required"`
+	TenantID        string            `bson:"tenant_id"`
 }
